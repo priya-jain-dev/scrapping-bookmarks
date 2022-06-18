@@ -1,0 +1,28 @@
+{
+  "name": "scrapping-bookmarks",
+  "version": "1.0.0",
+  "description": "Scrapping bookmarks from dev.to | hashnode.com and storing in notion database using GitHub actions.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node lib/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/priya-jain-dev/scrapping-bookmarks.git"
+  },
+  "keywords": [
+    "Scrapping bookmark",
+    "Notion database",
+    "Dev.to"
+  ],
+  "author": "Priya jain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/priya-jain-dev/scrapping-bookmarks/issues"
+  },
+  "homepage": "https://github.com/priya-jain-dev/scrapping-bookmarks#readme",
+  "dependencies": {
+    "puppeteer": "^14.4.1"
+  }
+}
