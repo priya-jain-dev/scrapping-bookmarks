@@ -3,7 +3,7 @@ name: "🔖 Reading list Dev.to"
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */24 * * *' # Runs every 24 hours
+    - cron: '*/5 * * * *' # Runs every 5 minutes
 
 jobs:
   update_reading_list:
@@ -15,5 +15,12 @@ jobs:
 
       - name: "Run a one-line script"
         run: echo Hello, world!
+        
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.3.0
+        
+      - name: Run a main script
+        run: 'lib/index.js'
+    
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
