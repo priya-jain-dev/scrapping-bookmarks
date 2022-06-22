@@ -20,6 +20,9 @@ jobs:
         uses: actions/setup-node@v3.3.0
         with:
             node-version: 16
+      - env:
+          EMAIL: ${{ secrets.DEV_EMAIL }}
+          PASSWORD: ${{ secrets.DEV_PASSWORD }}
       - run: npm ci
       - run: npm start
         
@@ -27,5 +30,3 @@ jobs:
 #         run: 'lib/index.js'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          EMAIL: ${{ secrets.DEV_EMAIL }}
-          PASSWORD: ${{ secrets.DEV_PASSWORD }}
