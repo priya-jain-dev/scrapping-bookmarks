@@ -35,3 +35,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DEV_EMAIL: ${{ secrets.DEV_EMAIL }}
           DEV_PASSWORD: ${{ secrets.DEV_PASSWORD }}
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
