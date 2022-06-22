@@ -20,11 +20,11 @@ jobs:
         uses: actions/setup-node@v3.3.0
         with:
             node-version: 16
-      - name: Create .env file
-        uses: SpicyPizza/create-envfile@v1
-        with:
-          envkey_DEV_EMAIL: ${{ secrets.DEV_EMAIL }}
-          envkey_DEV_PASSWORD: ${{ secrets.DEV_PASSWORD }}
+      # - name: Create .env file
+      #   uses: SpicyPizza/create-envfile@v1
+      #   with:
+      #     envkey_DEV_EMAIL: ${{ secrets.DEV_EMAIL }}
+      #     envkey_DEV_PASSWORD: ${{ secrets.DEV_PASSWORD }}
 
       - run: npm ci
       - run: npm start
@@ -33,3 +33,5 @@ jobs:
 #         run: 'lib/index.js'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEV_EMAIL: ${{ secrets.DEV_EMAIL }}
+          DEV_PASSWORD: ${{ secrets.DEV_PASSWORD }}
