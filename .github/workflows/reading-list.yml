@@ -1,4 +1,4 @@
-name: "🔖 Reading list Dev.to"
+name: "🔖 Bookmarks from Dev.to and daily.dev"
 
 on:
   workflow_dispatch:
