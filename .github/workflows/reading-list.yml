@@ -37,3 +37,4 @@ jobs:
           DEV_PASSWORD: ${{ secrets.DEV_PASSWORD }}
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
           NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+          DAILYDEV_BOOKMARK_RSS_URL: ${{ secrets.DAILYDEV_BOOKMARK_RSS_URL }}
