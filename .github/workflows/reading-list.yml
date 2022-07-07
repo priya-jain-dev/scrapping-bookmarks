@@ -1,40 +1,40 @@
-name: "🔖 Bookmarks from Dev.to and daily.dev"
+# name: "🔖 Bookmarks from Dev.to and daily.dev"
 
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: '1 */24 * * *' # Runs every 5 minutes
+# on:
+#   workflow_dispatch:
+#   schedule:
+#     - cron: '1 */24 * * *' # Runs every 5 minutes
 
-jobs:
-  update_reading_list:
-    name: "Update reading list"
-    runs-on: ubuntu-latest
-    steps:
-      - name: "📥  Fetching Repository Contents"
-        uses: actions/checkout@main
+# jobs:
+#   update_reading_list:
+#     name: "Update reading list"
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: "📥  Fetching Repository Contents"
+#         uses: actions/checkout@main
 
-      - name: "Run a one-line script"
-        run: echo Hello, world!
+#       - name: "Run a one-line script"
+#         run: echo Hello, world!
         
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v3.3.0
-        with:
-            node-version: 16
-      # - name: Create .env file
-      #   uses: SpicyPizza/create-envfile@v1
-      #   with:
-      #     envkey_DEV_EMAIL: ${{ secrets.DEV_EMAIL }}
-      #     envkey_DEV_PASSWORD: ${{ secrets.DEV_PASSWORD }}
+#       - name: Setup Node.js environment
+#         uses: actions/setup-node@v3.3.0
+#         with:
+#             node-version: 16
+#       # - name: Create .env file
+#       #   uses: SpicyPizza/create-envfile@v1
+#       #   with:
+#       #     envkey_DEV_EMAIL: ${{ secrets.DEV_EMAIL }}
+#       #     envkey_DEV_PASSWORD: ${{ secrets.DEV_PASSWORD }}
 
-      - run: npm ci
-      - run: npm start
+#       - run: npm ci
+#       - run: npm start
         
-#       - name: Run a main script
-#         run: 'lib/index.js'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DEV_EMAIL: ${{ secrets.DEV_EMAIL }}
-          DEV_PASSWORD: ${{ secrets.DEV_PASSWORD }}
-          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
-          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
-          DAILYDEV_BOOKMARK_RSS_URL: ${{ secrets.DAILYDEV_BOOKMARK_RSS_URL }}
+# #       - name: Run a main script
+# #         run: 'lib/index.js'
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#           DEV_EMAIL: ${{ secrets.DEV_EMAIL }}
+#           DEV_PASSWORD: ${{ secrets.DEV_PASSWORD }}
+#           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+#           NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+#           DAILYDEV_BOOKMARK_RSS_URL: ${{ secrets.DAILYDEV_BOOKMARK_RSS_URL }}
